@@ -24,6 +24,7 @@ end
 
 def move(array, index, value="X")
   array[index]=value
+  display_board(board)
 end
 
 def valid_move?(board, index)
