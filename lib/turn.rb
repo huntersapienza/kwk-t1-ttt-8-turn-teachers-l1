@@ -1,3 +1,15 @@
+def turn(board)
+  puts "Please enter 1-9:"
+  input = gets.strip
+  index = input_to_index(input)
+  if valid_move?
+    move(board,index)
+  else
+    puts "That's not a valid move."
+    turn(board)
+  end
+end
+
 def display_board(board)
   puts " #{board[0]} | #{board[1]} | #{board[2]} "
   puts "-----------"
@@ -21,15 +33,4 @@ end
 def position_taken?(board, index)
    board[index] != " "
    board[index] == "X" || board[index] == "O"
-end
-
-def turn(board)
-  puts "Please enter 1-9:"
-  input = gets.string
-  if valid_move?
-    do input_to_index(input)
-  else
-    puts "Please enter 1-9:"
-  end
-  do display_board(board)
 end
