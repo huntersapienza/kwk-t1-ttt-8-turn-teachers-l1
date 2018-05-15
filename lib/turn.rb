@@ -23,7 +23,7 @@ def position_taken?(board, index)
    board[index] == "X" || board[index] == "O"
 end
 
-def turn
+def turn(board)
   puts "Please enter 1-9:"
   input = gets.string
   if valid_move?
